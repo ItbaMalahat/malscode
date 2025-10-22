@@ -1,0 +1,123 @@
+:root {
+  --bg: #0e1525;
+  --card: #111a2f;
+  --text: #e6eef6;
+  --muted: #8a97ad;
+  --accent: #58a6ff;
+  --shadow: rgba(0,0,0,0.4);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7fbff;
+    --card: #ffffff;
+    --text: #0d1b2a;
+    --muted: #5a6778;
+    --accent: #0077ff;
+    --shadow: rgba(0,0,0,0.1);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+.intro {
+  margin-top: -70px;
+  position: relative;
+}
+.highlight { color: var(--accent); }
+.social-links a img {
+  margin: 5px;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+.social-links a img:hover {
+  transform: scale(1.1);
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 16px;
+  max-width: 900px;
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.spin {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.6s;
+}
+.spin:hover {
+  transform: rotate(360deg) scale(1.1);
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.project {
+  background: rgba(255,255,255,0.04);
+  padding: 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px var(--shadow);
+}
+
+/* Stats */
+.stats img {
+  border-radius: 12px;
+  margin: 8px;
+  max-width: 100%;
+  transition: transform 0.3s;
+}
+.stats img:hover {
+  transform: scale(1.03);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.footer img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  opacity: 0.8;
+}
